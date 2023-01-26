@@ -5,7 +5,9 @@ public class Exception_hand {
         int data=40/0; //may throw exception
 
         System.out.println("code is running");
-
+        
+        String str = null;
+        System.out.println(str.length()); //getting NullPointerException
     }
 
 }
@@ -26,6 +28,19 @@ public class Exception_hand {
         System.out.println("code is running");
     }
 
+}
+
+public class Exception_hand {
+    public static void main(String[] args) {
+        try {
+            String a = "I am coding"; // length is 22
+            char c = a.charAt(25); // accessing 25th element
+            System.out.println(c);
+        }
+        catch(StringIndexOutOfBoundsException e) {
+            System.out.println("StringIndexOutOfBoundsException");
+        }
+    }
 }
 
 //Application of Multiple catch block

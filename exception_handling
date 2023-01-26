@@ -1,0 +1,54 @@
+//Normal exception
+
+public class Exception_hand {
+    public static void main(String[] args) {
+        int data=40/0; //may throw exception
+
+        System.out.println("code is running");
+
+    }
+
+}
+
+//Resolving exception
+
+public class Exception_hand {
+    public static void main(String[] args) {
+        try
+        {
+            int data=40/0; //may throw exception
+        }
+        //handling the exception
+        catch(ArithmeticException e)
+        {
+            System.out.println(e);
+        }
+        System.out.println("code is running");
+    }
+
+}
+
+//Application of Multiple catch block
+
+public class Exception_hand {
+    public static void main(String[] args) {
+        try{
+            int a[]=new int[9];
+
+            System.out.println(a[10]);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Arithmetic Exception occurs...");
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("ArrayIndexOutOfBounds Exception occurs...");
+        }
+        catch(Exception e)
+        {
+            System.out.println("Parent Exception occurs...");
+        }
+        System.out.println("code is running...");
+    }
+}

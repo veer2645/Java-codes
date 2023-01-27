@@ -1,0 +1,64 @@
+//Application of Finally block
+
+
+public class ad_exceptionhand {
+    public static void main(String[] args) {
+        try{
+
+            int data=12/5;
+            System.out.println(data);
+        }
+            //catch won't be executed
+            
+        catch(NullPointerException e){
+            System.out.println(e);
+        }
+
+        finally {
+            System.out.println("finally block is executing");
+        }
+
+        System.out.println("end code");
+    }
+}
+
+public class ad_exceptionhand {
+    public static void main(String[] args) {
+        try {
+            //throws divide by zero exception
+            int data=21/0;
+            System.out.println(data);
+        }
+        catch(ArithmeticException e){
+
+            System.out.println(e);
+        }
+
+        //executes regardless of exception occured or not
+        finally {
+            System.out.println("finally block is executing");
+        }
+
+        System.out.println("end code");
+    }
+}
+
+//Application of throw keyword
+
+public class ad_exceptionhand {
+
+    public static void validate(int age) {
+        if(age<18) {
+            
+            throw new ArithmeticException("not eligible to vote");
+        }
+        else {
+            System.out.println("eligible to vote!!");
+        }
+    }
+    public static void main(String[] args) {
+        validate(13);
+        System.out.println("end of code")
+
+    }
+}

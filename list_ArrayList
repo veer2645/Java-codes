@@ -1,0 +1,98 @@
+import java.util.ArrayList;
+
+public class ListPract {
+    public static void main(String[] args) {
+        ArrayList myArrayList = new ArrayList();
+
+        myArrayList.add(1);
+        myArrayList.add(2);
+        myArrayList.add(3);
+        myArrayList.add(4);
+        myArrayList.add(5);
+        myArrayList.add(6);
+
+        myArrayList.add(2,23);
+
+        //Printing List1
+        System.out.println("ArrayList1 : " + myArrayList);
+
+
+        //Getting element at respective index
+        System.out.println(myArrayList.get(5));
+        System.out.println(myArrayList.get(2));
+        System.out.println(myArrayList.get(6));
+
+        System.out.println("Updating element at index 2");
+        myArrayList.add(2,10);
+
+
+        //Creating new Arraylist
+        ArrayList myArraylist2 = new ArrayList();
+
+        myArraylist2.addAll(myArrayList);
+
+        System.out.println("ArrayList2 : " + myArraylist2);
+        
+        //Using Clone method
+        ArrayList myArrayListClone = (ArrayList) myArrayList.clone();
+        System.out.println("Printing clone MyArrayList: " + myArrayListClone);
+        
+    }
+
+}
+
+
+
+import java.util.ArrayList;
+
+public class ListPract {
+    public static void main(String[] args) {
+        ArrayList myArrayList = new ArrayList();
+
+        myArrayList.add(1);
+        myArrayList.add(2);
+        myArrayList.add(3);
+        myArrayList.add(3);
+        myArrayList.add(5);
+        myArrayList.add(6);
+        myArrayList.add(1);
+
+
+        //Printing List1
+        System.out.println("ArrayList1 : " + myArrayList);
+
+        System.out.println("Checking for 3");
+        boolean result= myArrayList.contains(3);
+        if(result){
+            System.out.println("Item exists");
+        }
+        else {
+            System.out.println("Item doesn't exist");
+        }
+
+        System.out.println(myArrayList.indexOf(5));
+
+        //myArrayList.clear();
+
+        if(myArrayList.isEmpty()){
+            System.out.println("ArrayList is empty");
+        }
+        else{
+            System.out.println("ArrayList is not empty");
+        }
+        // Last occurrence Index of element
+        System.out.println(myArrayList.lastIndexOf(1));
+        
+        // size of ArrayList
+        System.out.println(myArrayList.size());
+        
+        //Updating value of particular index
+        myArrayList.set(0,21);
+        System.out.println(myArrayList);
+
+    }
+
+}
+
+
+

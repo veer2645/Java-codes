@@ -1,0 +1,65 @@
+//Stack
+
+import java.util.Stack;
+public class Stack_pract {
+    public static void main(String[] args) {
+
+        Stack newStack = new Stack<Integer>();
+
+        System.out.println("Is stack empty: "+ newStack.isEmpty());
+
+        newStack.push(25);
+        newStack.push(35);
+        newStack.push(36);
+
+        System.out.println("Top element: "+ newStack.peek());
+        System.out.println("Is stack contain 35: "+ newStack.search(35));
+        System.out.println("Is stack contain 34: "+ newStack.search(34));
+        System.out.println("is satck contain 36: "+ newStack.search(36));
+
+
+        System.out.println("Top element before pop: "+ newStack.peek());
+        newStack.pop();
+        System.out.println("Top element after pop: "+ newStack.peek());
+    }
+}
+
+
+
+//Array_Deque
+
+
+import java.util.ArrayDeque;
+import java.util.Iterator;
+
+public class Arraydeque {
+    public static void main(String[] args) {
+        ArrayDeque newDeque = new ArrayDeque<String>();
+        newDeque.add("Mahaveer");
+        newDeque.add("Jay");
+        newDeque.addFirst("Shri");
+        newDeque.addLast("Ram");
+
+        newDeque.offerFirst("Varun");
+        newDeque.offerLast("Krishna");
+
+        System.out.println("First Element: "+ newDeque.getFirst());
+
+        System.out.println("Last Element: "+ newDeque.getLast());
+
+        System.out.println("Is contaning Mahaveer: " + newDeque.contains("Mahaveer"));
+        System.out.println("Is contaning veer: " + newDeque.contains("veer"));
+
+
+        System.out.println("Iterating all elements in decending order");
+        Iterator<String> myIterator = newDeque.descendingIterator();
+
+        while (myIterator.hasNext()){
+            System.out.println(myIterator.next());
+        }
+        
+        System.out.println(newDeque.isEmpty());
+
+        
+    }
+}

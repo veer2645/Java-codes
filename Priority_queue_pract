@@ -1,0 +1,36 @@
+import java.util.Iterator;
+import java.util.PriorityQueue;
+
+public class PriorityQ_pract {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+
+        pq.add(33);
+        pq.add(10);
+        pq.add(15);
+
+        System.out.println(pq.peek());
+
+        System.out.println(pq.poll());
+
+        System.out.println(pq.peek());
+
+        PriorityQueue<String> pq1 = new PriorityQueue<>();
+        pq1.add("Jaya");
+        pq1.add("Rekha");
+        pq1.add("Hema");
+        pq1.add("Sushma");
+
+        System.out.println("Initial Priority Queue: " + pq1);
+        System.out.println("Poll Method: " + pq1.poll());
+        System.out.println("After poll: " + pq1);
+
+        Iterator iterator = pq1.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+
+
+        }
+    }
+}

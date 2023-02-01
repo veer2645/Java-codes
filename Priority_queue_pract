@@ -29,6 +29,26 @@ public class PriorityQ_pract {
 
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
+            
+        PriorityQueue<Integer> pq3 = new PriorityQueue<Integer>();
+
+            
+            pq3.add(20);
+            pq3.add(19);
+            pq3.add(30);
+            pq3.add(25);
+            pq3.add(45);
+            pq3.add(50);
+
+            System.out.println("Priority pq3 values are: " + pq3);
+
+            // Creating a comparator
+            Comparator comp = pq3.comparator();
+
+            // Displaying the comparator values
+            System.out.println("Since the Comparator value is: " + comp);
+            System.out.println("follows natural ordering");
+
 
 
         }

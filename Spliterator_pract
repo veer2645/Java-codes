@@ -7,17 +7,17 @@ public class SpliteratorDemo
     public static void main(String[] args)
     {
         // Create an array list for doubles.
-        ArrayList<Integer> al = new ArrayList<>();
+        ArrayList<Integer> sd = new ArrayList<>();
 
         // Add values to the array list.
-        al.add(1);
-        al.add(2);
-        al.add(-3);
-        al.add(-4);
-        al.add(5);
+        sd.add(1);
+        sd.add(2);
+        sd.add(-3);
+        sd.add(-4);
+        sd.add(5);
 
 
-        Stream<Integer> str = al.stream();
+        Stream<Integer> str = sd.stream();
         
         Spliterator<Integer> splitr1 = str.spliterator();
         
@@ -32,7 +32,7 @@ public class SpliteratorDemo
         splitr1.forEachRemaining((n) -> System.out.println(n));
 
         // Obtaining another  Stream to the array list.
-        Stream<Integer> str1 = al.stream();
+        Stream<Integer> str1 = sd.stream();
         splitr1 = str1.spliterator();
 
         // trySplit() method

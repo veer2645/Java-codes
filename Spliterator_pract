@@ -10,11 +10,11 @@ public class SpliteratorDemo
         ArrayList<Integer> sd = new ArrayList<>();
 
         // Add values to the array list.
-        sd.add(1);
-        sd.add(2);
-        sd.add(-3);
-        sd.add(-4);
         sd.add(5);
+        sd.add(6);
+        sd.add(-7);
+        sd.add(-8);
+        sd.add(9);
 
 
         Stream<Integer> str = sd.stream();

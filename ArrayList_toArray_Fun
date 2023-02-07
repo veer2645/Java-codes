@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+public class ToArrayFuction {
+    public static void main(String[] args) {
+
+        ArrayList<String> list = new ArrayList<String>();
+
+        list.add("Ram");
+        list.add("Shyam");
+        list.add("Raju");
+        list.add("Suraj");
+        list.add("Rahul");
+        list.add("Ajay");
+
+        String[] myarray= new String[list.size()];
+        list.toArray(myarray);
+
+        for(String i: myarray){
+            System.out.println(i);
+        }
+
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+
+        list1.add(36);
+        list1.add(28);
+        list1.add(34);
+        list1.add(65);
+        list1.add(24);
+        list1.add(36);
+
+        String[] intarray= new String[list.size()];
+        list.toArray(myarray);
+
+        for(String i: intarray){
+            System.out.println(i);
+        }
+
+
+
+    }
+}

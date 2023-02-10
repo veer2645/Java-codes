@@ -1,0 +1,11 @@
+public class BMIMachine extends HeartMonitor
+{
+    public static void main(String[] args) {
+        System.out.println(getMaxHeartRate(30));
+    }
+    
+    public static int getMaxHeartRate(int age) {
+        System.out.println("Method executed from subclass");
+        return 230 - age;
+    }
+}

@@ -1,0 +1,14 @@
+public class HeartMonitor
+{
+    public String maximumHeartRate;
+    
+    public static void main(String[] args) {
+        System.out.println(getMaxHeartRate(30));
+    }
+    
+    public static int getMaxHeartRate(int age) {
+        int result = 0;
+        result = 220 - age;
+        return result;
+    }
+}

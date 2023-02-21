@@ -1,0 +1,102 @@
+import java.util.*;
+public class CaesarCipher {
+    
+    //Encryption
+
+    public static String Encrypt(String text, int key) {
+        String toEncrypt = "";
+        //format the text to be encrypted
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                ch = (char) (ch + key);
+
+                if (ch > 'z') {
+                    ch = (char) (ch - 'z' + 'a' - 1);
+                }
+
+                toEncrypt += ch;
+            } else if (ch >= 'A' && ch <= 'Z') {
+                ch = (char) (ch + key);
+
+                if (ch > 'Z') {
+                    ch = (char) (ch - 'Z' + 'A' - 1);
+                }
+
+                toEncrypt += ch;
+
+            } else {
+                toEncrypt += ch;
+            }
+        }
+        return toEncrypt;
+    }
+    
+    //DeCryption
+    
+    public static String Decrypt(String text, int key) {
+        //the encrypted code is already uppercase,
+        //therefore there is no need of formatting
+        String toDecrupt = "";
+
+
+        for(int i = 0; i < text.length(); ++i){
+            char ch = text.charAt(i);
+            if(ch >= 'a' && ch <= 'z'){
+                ch = (char)(ch - key);
+
+                if(ch < 'a'){
+                    ch = (char)(ch + 'z' - 'a' + 1);
+                }
+
+                toDecrupt += ch;
+            }
+            else if(ch >= 'A' && ch <= 'Z'){
+                ch = (char)(ch - key);
+
+                if(ch < 'A'){
+                    ch = (char)(ch + 'Z' - 'A' + 1);
+                }
+
+                toDecrupt += ch;
+            }
+            else {
+
+                toDecrupt += ch;
+            }
+        }
+        return toDecrupt;
+        }
+        
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+            System.out.print("Type message: ");
+            String message = sc.nextLine();
+            System.out.print("Type key: ");
+            int key = sc.nextInt();
+            sc.close();
+
+            // Encrypting the plain message
+            System.out.println("\nEncrypting the message....");
+            String encryptedMessage = Encrypt(message, key);
+            System.out.println("Encrypted message : " + encryptedMessage);
+
+            // Decrypting the encrypted message
+            System.out.println("\nDecrypting the message...");
+            String recoveredMessage = Decrypt(encryptedMessage, key);
+            System.out.println("Decrypted message : " + recoveredMessage);
+
+    }
+}
+
+//OutPut
+
+Type message: Java Forever!
+Type key: 3
+
+Encrypting the message....
+Encrypted message : Mdyd Iruhyhu!
+
+Decrypting the message...
+Decrypted message : Java Forever!
+
